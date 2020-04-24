@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<head>
+  <script src="../ext/jquery-2.1.3.min.js"></script>
+  <script src="../ext/jquery.dataTables-1.10.5.min.js"></script>
+  <script src="../ext/bootstrap-3.3.2.min.js"></script>
+  <script src="../js/cif.js"></script>
+  <script src="../js/browserDependent_functions.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/help.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/contextmenus.js"></script>
+  <script src="../js/browserDependent_functions.js"></script>
+  <link rel="stylesheet" href="../css/home.css">
+
+</head>
+<div id="template"></div>
+<template id="title">Home</template>
+<template id="target">target="__blank"</template>
+<template id="searchnav"></template>
+<template id="content">
+  <div class="page-header">
+      <h1>CIF Home</h1>
+  </div>
+  <div class="homerow">
+    <div class="homecol left-col">
+      <h1>
+        Verbose Robot Chrome
+      </h1>
+      <h4><br>
+        Welcome to the homepage of the Verbose Robot Chrome Extension.<br><br>
+        Refer to Page Descriptions on the right for detailed information on using this extension.<br><br>
+        Please check out the links below if you'd like to know more about our project!
+      </h4>
+      <h1>
+        License and Copyright
+      </h1>
+      <h4><br>
+        Collective Intelligence Framework (CIF) is Copyright (C) 2017 the CSIRT Gadgets Foundation
+        <br> <br>
+        Free use of this software is granted under the terms of the Mozilla Public License Version 2.0 (MPL2). For details see the file LICENSE included with the distribution.
+      </h4>
+      <h1>
+        Related Links
+      </h1>
+      <div class="homerow">
+        <div class="homecol">
+          <h4><br>
+            <a href="https://github.com/Nebrethar/verbose-robot-chrome">
+              Github Repository (v4)
+            </a><br><br>
+            <a href="https://csirtgadgets.com/collective-intelligence-framework">
+              CIF Webpage
+            </a>
+          </h4>
+        </div>
+        <div class="homecol">
+          <h4><br>
+            <a href="https://github.com/csirtgadgets/bearded-avenger-chrome">
+              Official Github Repository (v3)
+            </a><br><br>
+            <a href="https://chrome.google.com/webstore/detail/bearded-avenger-client-ci/ggapdokcabjlmadcloapikhofcpkaocg?hl=en-US">
+              Chrome Extension Page (v3)
+            </a>
+          </h4>
+        </div>
+        <br><br>  <br>
+        <h1>
+          <br>Fields
+        </h1>
+        <h4><br>
+          <div class="homerow">
+            The CIF databsae fields are used to submit and view data in the CIF database.
+            <br>
+            <strong>Each field has a unique function, explained here:</strong><br><br>
+            <table id="fields">
+              <tbody>
+                <tr>
+                  <th class="first">Field</th>
+                  <th class="second">Description</th>
+                </tr>
+                <tr>
+                  <td class="first">Domain</td>
+                  <td class="second">Domain name or IPv4 address</td>
+                </tr>
+                <tr>
+                  <td class="first">Tags</td>
+                  <td class="second">Set manually in the submission process to classify threats</td>
+                </tr>
+                <tr>
+                  <td class="first">Description</td>
+                  <td class="second">Explanation of the threat and reason for action</td>
+                </tr>
+                <tr>
+                  <td class="first">Protocol</td>
+                  <td class="second">itype used by threat (IPv4 or IPv6)</td>
+                </tr>
+                <tr>
+                  <td class="first">Provider</td>
+                  <td class="second">Organizational source of the submission (URL)</td>
+                </tr>
+                <tr>
+                  <td class="first">Severity</td>
+                  <td class="second">In order from least severe to most severe:
+  (WHITE, GREEN, AMBER, RED)</td>
+                </tr>
+                <tr>
+                  <td class="first">Confidence</td>
+                  <td class="second">Submitter's confidence in the validity of the submission (1-4)</td>
+                </tr>
+                <tr>
+                  <td class="first">Threat Group</td>
+                  <td class="second">Associated threat group</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </h4>
+      </div>
+    </div>
+    <div class="homecol">
+      <h1>
+        Page Descriptions
+      </h1>
+      <h4><br>
+        Below is a list of pages used in the CIF Chrome Extension. <br>
+        Each item includes a description of the purpose, function, and intended use of each page.<br>
+      </h4>
+      <h2>
+        Submit
+      </h2>
+      <h4>
+        Submitting entries to the database is the core function of the CIF chrome extension.<br><br>
+        <strong>Fields used to submit your data are described in the "Fields" section of this webpage.</strong><br><br>
+        If you make a mistake and attempt to submit data with the mistake, the page will confirm that you want to submit that data as-is.<br>
+        You can always press "cancel" to go back.
+      </h4>
+      <h2>
+        Settings
+      </h2>
+      <h4><br>
+        The settings page will allow the user to add or delete connection profiles for a CIF Backend.
+        <br>The user may also test the connection and connect to multiple sources if desired. <br><br>
+        Connecting to a server requires certain information from the server.
+        <br>These values include an a username, a domain, and an API token.<br>
+        Group and Provider are not mandatory, but may help narrow down search results in the future.
+        <br><br>
+        Below is a detailed explanation for each required field.<br><br>
+      </h4>
+      <table id="fields">
+        <tbody>
+          <tr>
+            <th class="first">Field</th>
+            <th class="second">Description</th>
+          </tr>
+          <tr>
+            <td class="first">Name</td>
+            <td class="second">Personal identifier for the connection</td>
+          </tr>
+          <tr>
+            <td class="first">API Location</td>
+            <td class="second">Destination in URL format</td>
+          </tr>
+          <tr>
+            <td class="first">Token</td>
+            <td class="second">Token provided by CIF backend</td>
+          </tr>
+          <tr>
+            <td class="first">Groups</td>
+            <td class="second">Connection group for organization</td>
+          </tr>
+          <tr>
+            <td class="first">Provider</td>
+            <td class="second">Organization name</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2>
+        Search
+      </h2>
+      <h4>
+        <div class="homerow">
+            The Search page is used to find entries that have already been submitted to the database.<br>
+            the field "tags" will retrieve the most values, while "domain" can find an exact IP.
+            <br><br>
+            Two additional fields exist for the Search page:
+            <br><br>
+            <div class="homecol" style="width:20%;">
+          </div>
+          <table id="fields">
+            <tbody>
+              <tr>
+                <th class="first">Field</th>
+                <th class="second">Description</th>
+              </tr>
+              <tr>
+                <td class="first">Timestamp</td>
+                <td class="second">Date and time of data submission</td>
+              </tr>
+              <tr>
+                <td class="first">Count</td>
+                <td class="second">Number of occurrences in the database</td>
+              </tr>
+            </tbody>
+          </table>
+      </h4>
+      <br><br>
+      </div>
+  </div>
+</template>
+<script src="../js/ciftemplate.js"></script>

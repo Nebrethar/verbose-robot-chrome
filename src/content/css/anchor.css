@@ -1,0 +1,29 @@
+.homecol {
+  float: left;
+  width: 50%;
+}
+.homerow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.actions_header
+{
+  min-width:230px;
+}
+.options_header
+{
+  max-width:150px;
+  min-width:150px;
+}
+input, select, table
+{
+  font-weight: 600 !important;
+}
+.left-col
+{
+  padding-right:5%;
+}
+#fields tbody {
+  width:100%;
+}

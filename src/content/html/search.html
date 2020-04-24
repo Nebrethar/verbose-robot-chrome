@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+  <script src="../ext/jquery-2.1.3.min.js"></script>
+  <script src="../ext/jquery.dataTables-1.10.5.min.js"></script>
+  <script src="../ext/bootstrap-3.3.2.min.js"></script>
+  <script src="../js/cif.js"></script>
+  <script src="../js/browserDependent_functions.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/search.js"></script>
+</head>
+<div id="template">
+<template id="title">Search</template>
+<template id="target">target="__blank"</template>
+<template id="searchnav">
+  <form class="navbar-form" action="search.html" method="GET" id="searchFormNav">
+      <div class="form-group">
+          <input type="text" placeholder="Domain (example.com)" class="form-control" name="q" id="q" size="72">
+      </div>
+      <button class="btn btn-default" id="btnSearch">Quick Search</button>
+  </form>
+</template>
+<template id="content">
+  <div class="page-header">
+      <h1>Search</h1>
+  </div>
+  <form class="navbar-form" action="" method="POST" id="searchForm" style="padding-left:0px;">
+                    <div style="display:inline-block;width:880px;">
+                      <div class="form-group" style="display:inline-block;">
+                          <select class="form-control" id="confidence" name="confidence">
+                                  <option value="11"  selected="1">Any Confidence</option>
+                                  <option value="1">Confidence Level 1</option>
+                                  <option value="2">Confidence Level 2</option>
+                                  <option value="3">Confidence Level 3</option>
+                                  <option value="4">Confidence Level 4</option>
+                              </select>
+                          <input type="text" placeholder="Provider" class="form-control" name="provider" id="provider">
+                          <input type="text" placeholder="Group" class="form-control" name="groups" id="groups">
+                          <input type="date" class="form-control" name="reporttime">
+                          <p style="margin-left:20px;width:60px;display:inline-block">*Optional</p>
+                      </div>
+                      <br>
+                      <input type="text" placeholder="Tags" class="form-control" name="tags" id="tags">
+                      <radio id="itype" name="itype" title="IP type used by threat (ipv4, ipv6 or any for all)."
+                      style="display:inline-block; margin:20px 0px 0px 20px;">
+                          <br>
+                          <input type="radio" name="itype" value="any" checked> Any itype
+                          <input type="radio" name="itype" value="ipv4"> IPv4
+                          <input type="radio" name="itype" value="ipv6"> IPv6
+                        </radio>
+                      <p style="margin-left:20px;width:100px;display:inline-block">*Required</p>
+                      <button class="btn btn-default" id="btnSearch" style="float:right;margin-top:30px;">Search</button>
+                    </div>
+                </form>
+  <div class="row">
+      <div class="col-md-12">
+          <div class="row">
+              <div id="status"></div>
+          </div>
+          <div class="page-header">
+              <h1>Results</h1>
+          </div>
+          <table class="display" id="results">
+              <thead>
+                  <th>Timestamp</th>
+                  <th>Group</th>
+                  <th>Severity</th>
+                  <th>Domain</th>
+                  <th>Provider</th>
+                  <th>Tags</th>
+                  <th>Confidence</th>
+                  <th>Protocol</th>
+                  <th>Count</th>
+              </thead>
+              <tfoot>
+                  <th>Timestamp</th>
+                  <th>Group</th>
+                  <th>Severity</th>
+                  <th>Domain</th>
+                  <th>Provider</th>
+                  <th>Tags</th>
+                  <th>Confidence</th>
+                  <th>Protocol</th>
+                  <th>Count</th>
+              </tfoot>
+          </table>
+      </div>
+  </div>
+</template>
+</div>
+<script src="../js/ciftemplate.js"></script>

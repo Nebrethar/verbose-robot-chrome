@@ -1,0 +1,17 @@
+/* specifies the style for the popup button used in firefox */
+#custom-button-1,
+#wrapper-custom-button-1
+  {list-style-image: url("chrome://cifclient/content/images/button-1.png");}
+
+
+.custombutton                  
+  {-moz-image-region: rect( 0% 100% 100%  0%);}
+
+.custombutton:hover     
+  {-moz-image-region: rect( 0% 100% 100%  0%);}
+
+[iconsize="small"] .custombutton
+  {-moz-image-region: rect(  0% 100% 100%  0%);}
+
+[iconsize="small"] .custombutton:hover
+  {-moz-image-region: rect( 0% 100% 100%  0%);}

@@ -1,0 +1,29 @@
+tr {
+  line-height: 160%
+}
+
+th, td {
+  Border:2px;
+  border-bottom:1px solid black;
+}
+
+th.first, td.first {
+  width:20%;
+}
+
+th.second, td.second {
+  font-weight: normal;
+  width:60%;
+  border-right: 1px solid black;
+}
+
+th.second {
+  font-weight: bold;
+}
+
+th {
+  border-bottom:2px solid black;
+}
+tr, th, td {
+  font-size:18px;
+}

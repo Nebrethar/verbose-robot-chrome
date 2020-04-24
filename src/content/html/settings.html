@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+  <script src="../ext/jquery-2.1.3.min.js"></script>
+  <script src="../ext/jquery.dataTables-1.10.5.min.js"></script>
+  <script src="../ext/bootstrap-3.3.2.min.js"></script>
+  <script src="../js/cif.js"></script>
+  <script src="../js/browserDependent_functions.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/settings.js"></script>
+</head>
+<div id="template"></div>
+<template id="title">Settings</template>
+<template id="target">target="__blank"</template>
+<template id="searchnav">
+  <form class="navbar-form" action="search.html" method="GET" id="searchFormNav">
+      <div class="form-group">
+          <input type="text" placeholder="Domain (example.com)" class="form-control" name="q" id="q" size="72">
+      </div>
+      <button class="btn btn-default" id="btnSearch">Quick Search</button>
+  </form>
+</template>
+<template id="content">
+  <div class="row">
+      <div class="col-md-0"></div>
+      <div class="col-md-12">
+          <div class="page-header">
+              <h1>Profile Settings</h1>
+          </div>
+          <h4>Hover over the input boxes for more details</h4>
+          <table class="table table-stripped" id="profilestable">
+              <tr>
+                  <th>Name</th>
+                  <th>API Location</th>
+                  <th>Token</th>
+                  <th>Groups</th>
+                  <th>Provider</th>
+                  <th class="options_header">Options</th>
+                  <th class="actions_header">Actions</th>
+              </tr>
+          </table>
+          <button id="addarow" class="btn btn-primary">Add Another Profile</button>
+          <button id="savebutton" class="btn btn-primary">Save</button>
+      </div>
+      <div class="col-md-0"></div>
+  </div>
+  <div class="row" style="margin-top: 20px">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+          <div id="status"></div>
+      </div>
+
+  </div>
+</template>
+<script src="../js/ciftemplate.js"></script>
