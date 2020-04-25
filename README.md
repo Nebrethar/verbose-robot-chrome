@@ -18,6 +18,15 @@ This repository houses Version 4 of the CIF Browser Extension.
 * Click "Select Folder" to load the manifest file.
 * The addon manifest is automatically loaded from the folder, and the addon is installed!
 
+# Contributors
+
+### CIF Capstone Group
+ - Matt Snell
+ - Jacob Burroughs
+ - Hanan Almaimani
+ - Connor Joyce
+ - Mohammed Alhaddad
+
 
 # License and Copyright
 Copyright (C) 2017 the CSIRT Gadgets Foundation
